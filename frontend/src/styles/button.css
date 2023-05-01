@@ -1,0 +1,20 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffa6a6;
+  border: none;
+  color: #222222;
+  border-radius: 10px;
+  padding: 16px 32px;
+  font-size: 24px;
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.button:hover {
+  background-color: #848484;
+  color: #ffffff;
+}
