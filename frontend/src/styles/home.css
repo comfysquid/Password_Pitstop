@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.title {
+  font-size: 48px;
+  font-weight: bold;
+  color: #222222;
+  margin-bottom: 32px;
+}
+
+.subtitle {
+  font-size: 32px;
+  color: #22222;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
