@@ -17,8 +17,13 @@ def get_character_sets():
 def generate_password(length=12):
     lowercase, uppercase, numbers, symbols = get_character_sets()
     all_chars = lowercase + uppercase + numbers + symbols
-    password = ''.join(secrets.choice(all_chars) for _ in range(length))
-    return password
+    while True:
+        password = ''.join(secrets.choice(all_chars) for _ in range(length))
+        try:
+            test_password(password)
+            return password
+        except ValueError:
+            pass
 
 
 def test_password(password):

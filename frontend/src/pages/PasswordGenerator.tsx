@@ -13,11 +13,18 @@ function PasswordGenerator() {
     setPassword(response.data.password);
   };
 
+  const copyPasswordToClipboard = () => {
+    navigator.clipboard.writeText(password);
+  };
+
   return (
     <div className="container">
       <h1 className="title">Password Generator</h1>
       <div className="password-generator">
         <div className="password">{password}</div>
+        {password && (
+          <button className="copy-button" onClick={copyPasswordToClipboard}>Copy to Clipboard</button>
+        )}
         <button className="button" onClick={generatePassword}>Generate Password</button>
       </div>
     </div>
