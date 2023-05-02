@@ -41,3 +41,10 @@ li a {
 li a:hover {
   color: #ffffff;
 }
+
+.logo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  height: 100px;
+}
