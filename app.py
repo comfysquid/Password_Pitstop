@@ -27,8 +27,11 @@ def test_password(password):
     has_upper = any(char in uppercase for char in password)
     has_number = any(char in numbers for char in password)
     has_special = any(char in symbols for char in password)
+    is_empty = not password
 
-    if not has_lower:
+    if is_empty:
+        raise ValueError("Password cannot be empty")
+    elif not has_lower:
         raise ValueError("Password does not contain a lowercase character")
     elif not has_upper:
         raise ValueError("Password does not contain an uppercase character")
